@@ -1,13 +1,13 @@
 import streamlit as st 
 import pandas as pd 
 import numpy as np 
-import plotly.express as px 
+##import plotly.express as px 
 import plotly.graph_objects as go 
 from scipy.stats import norm 
 
 
 
-st.set_page_config(page_title='Dashboard', page_icon='📈', layout= "wide")
+st.set_page_config(page_title='Outliers Dashboard', page_icon='📈', layout= "wide")
 
 # load style css
 with open("style.css") as f:
@@ -70,7 +70,7 @@ col1, col2 = st.columns(2)
 
 try:
  with col1:
-  st.subheader(f"**NORMAL CURVE X~N**({round(mean, 2)},{round(std_dev, 2)})")
+  st.subheader(f"**NORMAL CURVE **({round(mean, 2)},{round(std_dev, 2)})")
   # Create a normal distribution curve
   x_values = np.linspace(mean - 4 * std_dev, mean + 4 * std_dev, 1000)
   y_values = norm.pdf(x_values, mean, std_dev)
