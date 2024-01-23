@@ -18,7 +18,7 @@ with open("style.css") as f:
 
 
 # load dataset
-dataset = pd.read_excel("C:\\Users\\Ismail\\Documents\\project_first\\streamlit-outliers\datas\data.xlsx")
+dataset = pd.read_excel("data.xlsx")
 
 
 ##st.dataframe(dataset, use_container_width=True)
